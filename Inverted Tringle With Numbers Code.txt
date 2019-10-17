@@ -1,0 +1,43 @@
+int main()
+
+{
+  
+  int i, rows, space, j=1;
+   
+  printf("Enter the number of rows in the inverted triangle - ");
+   
+  scanf("%d", &rows);
+  
+  for (i=1; i<=rows; i++)
+   
+ {
+        
+   for (space=1; space<=rows-i; space++)
+   
+   printf(" ");
+    
+   for (j=1; j<=i; j++) //here the condition was changed to j=i, it was something else before
+        
+    {
+       
+     printf("%d", i+j-1);
+            //printf("\n"); This was a mistake before the corrections made
+        
+    }
+        
+   for (j=2*(i-1); j>=i; j--) //here i put the < sign instead of the > sign in the condition statement
+        
+    {
+         
+   printf("%d", j);
+            //printf("\n"); so was this
+     
+    }
+     
+   printf("\n"); //This was one of the corrections made, this was added
+    
+  }
+  
+ return 0;
+
+}
